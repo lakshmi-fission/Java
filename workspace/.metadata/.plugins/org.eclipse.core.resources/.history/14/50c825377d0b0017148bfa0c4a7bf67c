@@ -1,0 +1,43 @@
+package hackerearth;
+
+import java.util.Scanner;
+
+public class PrintHackerearth {
+	static int c=0;
+	static char temp[] = new char[11];
+	static int k=0;
+	public static int subString(String input){
+		System.out.println(k);
+		String referenceString = "hackerearth";
+		for(int i=0;i<input.length();i++){
+			if(input.charAt(i) == referenceString.charAt(k)){
+				temp[k]=input.charAt(i);
+				k++;
+				//removingChar;
+				String removedString = input.substring(0,i)+input.substring(i+1);
+				System.out.println(removedString);
+				if(temp.length==11){
+					c=c+1;
+					temp = new char[11];
+					k=0;
+				}
+			else{
+				subString(removedString);
+				System.out.println(k+"===============");
+				}
+			}
+		}
+		return c;
+	}
+	public static void main(String args[]){
+		System.out.println("Enter string:");
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		sc.close();
+		System.out.println(subString(input));
+		
+		
+}
+	}
+	
+	

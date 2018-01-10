@@ -1,0 +1,30 @@
+package hackerearth;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MonkExample {
+	 public static void main(String args[]){
+		    int nooftestcases;
+		    ArrayList<String> arrayList = new ArrayList<String>();
+		    ArrayList<Integer> values = new ArrayList<>();
+		     Scanner scanner  = new Scanner(System.in);
+		     nooftestcases = Integer.parseInt(scanner.nextLine());
+		     System.out.println(nooftestcases);
+		     for(int i=0;i<nooftestcases;i++){
+		     arrayList.add(i,scanner.nextLine()); 
+		     }
+		     for(String item:arrayList){
+		    	 int count = 0;
+		    	 for(int j=0;j<item.length();j++){
+		             if(item.charAt(j) == 'i' || item.charAt(j) =='a'||item.charAt(j) =='e'|| item.charAt(j) =='o'||item.charAt(j) =='u'){
+		            	 	count = count+1;
+		             }
+		         }
+		    	 values.add(count);
+		     }
+		    for(Integer intValues:values){
+		    	System.out.println(intValues);
+		    }
+}
+}

@@ -1,0 +1,19 @@
+package regularexpressions;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Email {
+	public static void main(String args[]){
+		String email = "abc@cdef";
+		String regex = "^(.+)@[a-zA-Z{2,}]$";
+		Pattern p = Pattern.compile(regex);
+		Matcher m =p.matcher(email);
+		if(m.matches()){
+		
+			System.out.println("true");}
+			
+		}
+			
+		
+}

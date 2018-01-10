@@ -1,0 +1,22 @@
+package practice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ClassB {
+	
+public static void main(String args[]){
+	List<String> arrayList = new ArrayList<>();
+	arrayList.add("s");
+	arrayList.add("3");
+	arrayList.add("r");
+	arrayList.add("y");
+	arrayList.add(arrayList.size(),"hdhd");
+	System.out.println("classA");
+	System.out.println(arrayList.size());
+	System.out.println("at size -1"+arrayList.get(arrayList.size()-1));
+	for(String item:arrayList){
+		System.out.println("item=="+item);
+	}
+}
+}

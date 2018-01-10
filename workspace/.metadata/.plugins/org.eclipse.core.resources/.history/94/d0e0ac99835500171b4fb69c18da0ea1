@@ -1,0 +1,10 @@
+package factorypattern;
+
+public class FactoryPatternDemo {
+public static void main(String args[]){
+	ShapeFactory shapefactory = new ShapeFactory();
+	shapefactory.getShape("shape").draw();
+	shapefactory.getShape("rectangle").draw();
+	shapefactory.getShape("line").draw();
+}
+}

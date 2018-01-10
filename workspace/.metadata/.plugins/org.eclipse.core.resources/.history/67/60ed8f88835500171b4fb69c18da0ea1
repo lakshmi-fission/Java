@@ -1,0 +1,13 @@
+package factorypattern;
+
+public class FactoryPatternDemo {
+public static void main(String args[]){
+	ShapeFactory shapefactory = new ShapeFactory();
+	Shape  shape1 = shapefactory.getShape("shape");
+	shape1.draw();
+	Shape shape2 = shapefactory.getShape("rectangle");
+	shape2.draw();
+	Shape shape3 = shapefactory.getShape("line");
+	shape3.draw();
+}
+}
